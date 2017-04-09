@@ -1,0 +1,17 @@
+/* $Base */
+ body {
+   margine: 0 auto;
+   padding-top: 60px;
+   text-align: center;
+   font-family: 'Ubuntu', sans-serif;
+   @include fontsize(22);
+   font-weight: 500;
+   color: #333;
+   background-color: $color-bg;
+   
+ }	
+h1 {
+  @include fontsize(38);
+  font-style: italic;
+  text-shadow: 1px 1px 0 #f2f2f2, 2px 2px 0 #f2f2f2;
+}

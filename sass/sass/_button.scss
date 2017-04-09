@@ -1,0 +1,36 @@
+/* $Buttom */
+a.btn{
+  display: inline-block;
+  margin: 15px 15px 0;
+  padding: .6em 1.1em;
+  @include fontsize(26);
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: $color-btn;
+  border-radius: 3px;
+  box-shadow: 0 0 0 -2px $color-bg, 0 0 0 -1px $color-btn;
+  border: none;
+  -webkit-transition: -webkit-box-shadow .3s;
+  transition:box-shadow .3s;
+  &:hover, &:focus {
+    box-shadow: 0 0 0 2px $color-bg, 0 0 0 4px darken(#FF1D74, 5%);
+    @include transition-timing-function(cubic-bezier(.6,4,.3,.8));
+    @include animation (gelatine .5s 1);
+  }
+}
+
+a.btn-secondary {
+  background:$color-btn-secondary;
+  box-shadow: 0 0 0 -2px $color-bg, 0 0 0 -1px $color-btn-secondary;
+  &:hover {
+    box-shadow: 0 0 0 2px $color-bg, 0 0 0 4px darken($color-btn-secondary, 5%);
+  }
+}
+
+a.btn:active,
+a.btn-secondary:active  {
+    background: $color-btn-active;
+    @include transition-duration(0);
+    box-shadow: 0 0 0 2px $color-bg, 0 0 0 4px darken($color-btn-active, 5%);
+  }
